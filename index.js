@@ -1,11 +1,10 @@
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const connectToDatabase = require('./database/db');
-const doteenv = require('dotenv');
 const routes = require('./routes/routes');
 const app = express();
-
-doteenv.config();//função que identifica o arquivo .env
+const doteenv = require('dotenv');
 connectToDatabase();
 
 const port = process.env.PORT;
