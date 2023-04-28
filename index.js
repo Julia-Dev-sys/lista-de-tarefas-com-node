@@ -8,9 +8,9 @@ const doteenv = require('dotenv');
 connectToDatabase();
 
 const port = process.env.PORT;
-app.set("view engine", "ejs");//FUNÇÃO DO EJS PARA RENDERISAR A PAGINA INDEX.EJS
+app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname,"public")));
 app.use(express.urlencoded({extended:false}));
-app.use(routes);//envoco a função que gera as rotas do projeto
+app.use(routes);
 
 app.listen(port, () => console.log(`Servidor rodando em http://localhost:${port}/`));
